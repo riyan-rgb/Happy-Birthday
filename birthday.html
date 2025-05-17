@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Nindi!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fefefe;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-image: url("IMG/bg.png");
+      background-size: cover; /* agar gambar menutupi seluruh area */
+      background-repeat: no-repeat; /* agar gambar tidak diulang */
+      background-position: center;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fbfafa;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #080808;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #080808;
+      max-width: 600px;
+      margin: 10px auto 0;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .message {
+      text-align: center;
+      font-size: 1.1em;
+      padding: 30px 10px;
+      background-color: #fff3f4;
+      border-left: 5px solid #ff6b81;
+      border-radius: 5px;
+      margin: 40px 0;
+    }
+
+    footer {
+      background: #ff6b81;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .btn {
+      background-color: #ff6b81;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #e2556c;
+    }
+
+    audio {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="IMG/header.jpg" alt="Birthday Girl">
+    <h1>Happy Birthday, Nindi!</h1>
+    <p>JANGAN LUPA: HARI INI kamu dilarang sedih, wajib bahagia, dan harus makan enak! 🍜🥳</p>
+    <button class="btn" onclick="showBirthdayWishes()">Buka Doa Ulang Tahun 💌</button>
+  </header>
+  </header>
+
+  <section>
+    <div class="message">
+        <p>
+        Dear Nindi,<br><br>
+        Di ulang tahunmu ini, aku nggak bawa kado, tapi aku bawa kalimat yang mungkin bisa bikin kamu senyum dikit (atau ngelus dada 😅).<br><br>
+        Kamu itu kayak matahari pagi: selalu muncul tepat waktu, hangat, dan bikin semua orang semangat—meskipun kadang bikin silau juga sih 😆<br><br>
+        Terima kasih udah jadi teman yang bisa diandalkan... dan bisa diajak makan kapan aja!<br><br>
+        Tetap semangat, tetap ceria, dan kalau bisa... tetap ingat traktiran ya 😜<br><br>
+        Oh iya, alarm tubuh udah bunyi nih: waktunya isi bensin! Jangan suka skip makan, ntar disetrap sama aku! 🍽️🚨<br><br>
+        — Dari aku yang beruntung bisa kenal kamu
+        </p>
+    </div>
+
+    <h2 style="text-align: center; margin-bottom: 30px;">Memories</h2>
+    <div class="gallery">
+      <img src="IMG/foto1.jpg" alt="Memory 1">
+      <img src="IMG/foto2.jpg" alt="Memory 2">
+      <img src="IMG/foto3.jpg" alt="Memory 3">
+      <img src="IMG/foto4.jpg" alt="Memory 4">
+    </div>
+  </section>
+
+  <footer>
+    Made by RIYAN for Nindi's Special Day
+  </footer>
+
+  <script src="birthday.js"></script>
+  <script>
+    function showBirthdayWishes() {
+      const wishes = [
+        "Semoga setiap langkahmu dipenuhi berkah dan kebahagiaan 🎉💖",
+        "Di usia baru ini, semoga kamu makin bijaksana, sehat, dan dikelilingi cinta dari orang-orang tercinta 🥰",
+        "Semoga semua impian dan harapanmu segera terwujud. Terus bersinar, Nindi! 🌟"
+      ];
+
+      let delay = 0;
+      wishes.forEach((wish, index) => {
+        setTimeout(() => {
+          alert(wish);
+        }, delay);
+        delay += 500; // waktu jeda antar popup (ms), bisa disesuaikan
+      });
+    }
+  </script>
+
+</body>
+</html>
